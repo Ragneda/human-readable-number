@@ -2,7 +2,7 @@ module.exports = function toReadable(number) {
     let str = String(number);
     let str2 = "";
     for (let i = 0; i < str.length; i++) {
-        return (str2 += str[i]);
+         str2 += str[i];
     }
 
     if (str2 === "0" && str2.length === 1) {
@@ -69,4 +69,3 @@ module.exports = function toReadable(number) {
         return "twenty";
     }
 };
-
