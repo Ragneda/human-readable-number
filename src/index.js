@@ -2,69 +2,71 @@ module.exports = function toReadable(number) {
     let str = String(number);
     let str2 = "";
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === "0" && str.length === 1) {
-            return "zero";
-        }
-        if (str[i] === "1" && str.length === 1) {
-            return "one";
-        }
-        if (str[i] === "2" && str.length === 1) {
-            return "two";
-        }
-        if (str[i] === "3" && str.length === 1) {
-            return "three";
-        }
-        if (str[i] === "4" && str.length === 1) {
-            return "four";
-        }
-        if (str[i] === "5" && str.length === 1) {
-            return "five";
-        }
-        if (str[i] === "6" && str.length === 1) {
-            return "six";
-        }
-        if (str[i] === "7" && str.length === 1) {
-            return "seven";
-        }
-        if (str[i] === "8" && str.length === 1) {
-            return "eigh";
-        }
-        if (str[i] === "9" && str.length === 1) {
-            return "nine";
-        }
-        if (str[i] === "10" && str.length == 2) {
-            return "ten";
-        }
-        if (str[i] === "11" && str.length == 2) {
-            return "eleven";
-        }
-        if (str[i] === "12" && str.length == 2) {
-            return "twelve";
-        }
-        if (str[i] === "13" && str.length == 2) {
-            return "thirteen";
-        }
-        if (str[i] === "14" && str.length == 2) {
-            return "fourteen";
-        }
-        if (str[i] === "15" && str.length == 2) {
-            return "fifteen";
-        }
-        if (str[i] === "16" && str.length === 2) {
-            return "sixteen";
-        }
-        if (str[i] === "17" && str.length === 2) {
-            return "seventeen";
-        }
-        if (str[i] === "18" && str.length === 2) {
-            return "eighteen";
-        }
-        if (str[i] === "19" && str.length === 2) {
-            return "nineteen";
-        }
-        if (str[i] === "20" && str.length === 2) {
-            return "twenty";
-        }
         return (str2 += str[i]);
     }
+
+    if (str2 === "0" && str2.length === 1) {
+        return "zero";
+    }
+    if (str2 === "1" && str2.length === 1) {
+        return "one";
+    }
+    if (str2 === "2" && str2.length === 1) {
+        return "two";
+    }
+    if (str2 === "3" && str2.length === 1) {
+        return "three";
+    }
+    if (str2 === "4" && str2.length === 1) {
+        return "four";
+    }
+    if (str2 === "5" && str2.length === 1) {
+        return "five";
+    }
+    if (str2 === "6" && str2.length === 1) {
+        return "six";
+    }
+    if (str2 === "7" && str2.length === 1) {
+        return "seven";
+    }
+    if (str2 === "8" && str2.length === 1) {
+        return "eigh";
+    }
+    if (str2 === "9" && str2.length === 1) {
+        return "nine";
+    }
+    if (str2 === "10" && str2.length == 2) {
+        return "ten";
+    }
+    if (str2 === "11" && str2.length == 2) {
+        return "eleven";
+    }
+    if (str2 === "12" && str2.length == 2) {
+        return "twelve";
+    }
+    if (str2 === "13" && str2.length == 2) {
+        return "thirteen";
+    }
+    if (str2 === "14" && str2.length == 2) {
+        return "fourteen";
+    }
+    if (str2 === "15" && str2.length == 2) {
+        return "fifteen";
+    }
+    if (str2 === "16" && str2.length === 2) {
+        return "sixteen";
+    }
+    if (str2 === "17" && str2.length === 2) {
+        return "seventeen";
+    }
+    if (str2 === "18" && str2.length === 2) {
+        return "eighteen";
+    }
+    if (str2 === "19" && str2.length === 2) {
+        return "nineteen";
+    }
+    if (str2 === "20" && str2.length === 2) {
+        return "twenty";
+    }
 };
+
