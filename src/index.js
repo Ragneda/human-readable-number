@@ -1,7 +1,7 @@
 module.exports = function toReadable(number) {
     let str = String(number);
     let str2 = "";
-    for (let i = 0; (i = 0); i++) {
+    for (let i = 0; (i = 1); i++) {
         if (str[i] === "0") {
             return "zero";
         }
@@ -35,7 +35,7 @@ module.exports = function toReadable(number) {
         return (str2 += str[i]);
     }
 
-    for (let i = 0; (i = 1); i++) {
+    for (let i = 0; (i = 2); i++) {
         if (str[i] === "10") {
             return "ten";
         }
