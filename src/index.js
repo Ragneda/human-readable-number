@@ -1,71 +1,108 @@
 module.exports = function toReadable(number) {
     let str = String(number);
-    let str2 = "";
-    for (let i = 0; i < str.length; i++) {
-         str2 += str[i];
+
+    let x = [
+        "zero",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine"
+    ];
+    let a = [
+        "ten",
+        "eleven",
+        "twelve",
+        "thirteen",
+        "fourteen",
+        "fifteen",
+        "sixteen",
+        "seventeen",
+        "eighteen",
+        "nineteen"
+    ];
+
+    let b = [
+        "twenty",
+        "thirty",
+        "forty",
+        "fifty",
+        "sixty",
+        "seventy",
+        "eighty",
+        "ninety"
+    ];
+
+    let y = [
+        "one hundred",
+        "two hundred",
+        "three hundred",
+        "four hundred",
+        "five hundred",
+        "six hundred",
+        "seven hundred",
+        "eight hundred",
+        "nine hundred"
+    ];
+
+    if (str.length === 1) {
+        return x[number];
     }
 
-    if (str2 === "0" && str2.length === 1) {
-        return "zero";
+    if (str.length === 2 && number < 20) {
+        return a[number - 10];
     }
-    if (str2 === "1" && str2.length === 1) {
-        return "one";
+
+    if (str.length === 2 && number > 19) {
+        return b[number / 10 - 2];
     }
-    if (str2 === "2" && str2.length === 1) {
-        return "two";
+
+    if (
+        (str.length === 2 && number == 20) ||
+        number == 30 ||
+        number == 40 ||
+        number == 50 ||
+        number == 60 ||
+        number == 70 ||
+        number == 80 ||
+        number == 90
+    ) {
+        return b[number / 10 - 2];
     }
-    if (str2 === "3" && str2.length === 1) {
-        return "three";
+
+    if (
+        (str.length === 2 && number > 20 && number != 30) ||
+        number != 40 ||
+        number != 50 ||
+        number != 60 ||
+        number != 70 ||
+        number != 80 ||
+        number != 90
+    ) {
+        return b[str[0] - 2] + " " + x[str[1]];
     }
-    if (str2 === "4" && str2.length === 1) {
-        return "four";
+
+    if (str.length === 3 && str[2] == 0 && str[1] == 0) {
+        return y[str[0] - 1];
     }
-    if (str2 === "5" && str2.length === 1) {
-        return "five";
+
+    if (str.length === 3 && str[1] != 0 && str[1] == 1) {
+        return y[str[0] - 1] + " " + a[str[2]];
     }
-    if (str2 === "6" && str2.length === 1) {
-        return "six";
+
+    if (str.length === 3 && str[2] == 0 && str[1] > 1) {
+        return y[str[0] - 1] + " " + b[str[1] - 2];
     }
-    if (str2 === "7" && str2.length === 1) {
-        return "seven";
+
+    if (str.length === 3 && str[1] == 0 && str[2] != 0) {
+        return y[str[0] - 1] + " " + x[str[2]];
     }
-    if (str2 === "8" && str2.length === 1) {
-        return "eigh";
-    }
-    if (str2 === "9" && str2.length === 1) {
-        return "nine";
-    }
-    if (str2 === "10" && str2.length == 2) {
-        return "ten";
-    }
-    if (str2 === "11" && str2.length == 2) {
-        return "eleven";
-    }
-    if (str2 === "12" && str2.length == 2) {
-        return "twelve";
-    }
-    if (str2 === "13" && str2.length == 2) {
-        return "thirteen";
-    }
-    if (str2 === "14" && str2.length == 2) {
-        return "fourteen";
-    }
-    if (str2 === "15" && str2.length == 2) {
-        return "fifteen";
-    }
-    if (str2 === "16" && str2.length === 2) {
-        return "sixteen";
-    }
-    if (str2 === "17" && str2.length === 2) {
-        return "seventeen";
-    }
-    if (str2 === "18" && str2.length === 2) {
-        return "eighteen";
-    }
-    if (str2 === "19" && str2.length === 2) {
-        return "nineteen";
-    }
-    if (str2 === "20" && str2.length === 2) {
-        return "twenty";
+
+    if (str.length === 3 && str[2] != 0 && str[1] != 0 && str[1] > 1) {
+        return y[str[0] - 1] + " " + b[str[1] - 2] + " " + x[str[2]];
     }
 };
